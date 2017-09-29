@@ -1,0 +1,25 @@
+<h3> Fill in the details to submit your score</h3>
+<form role="form">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input #nameField type="text" id="name" placeholder="Full Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input #emailField type="text" id="email" placeholder="Email">
+  </div>
+  <div>
+    <label for="location"> Location:</label>
+    <select #locationField id="location">
+      <option value="Banglore">Banglore</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="id">Id:</label>
+    <input #idField type="text" id="id" placeholder="Id">
+  </div>
+</form>
+<button class="btn btn-primary" (click) = "onSubmit(nameField.value, emailField.value, locationField.value, idField.value)" >Submit</button>
