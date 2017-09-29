@@ -1,2 +1,42 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-form></app-form>
+<div class="wraper">
+<h1>Welcome</h1>
+<h2>press start button to start the game</h2>
+<div class="quad">
+  <div class="row justify-content-center no-gutters">
+    <div class="col-sm-2">
+      <app-card class="card1"[cardIndex]='0' [randomNumber]=randomNumber>1</app-card>
+    </div>
+    <div class="col-sm-2">
+        <app-card class="card2"[cardIndex]='1'[randomNumber]=randomNumber>2</app-card>
+    </div>    
+  </div>  
+  <div class="row justify-content-center no-gutters">
+      <div class="col-sm-2">
+        <app-card class="card3" [cardIndex]='2'[randomNumber]=randomNumber>3</app-card>
+      </div>
+      <div class="col-sm-2">
+        <app-card class='card4'[cardIndex]='3'[randomNumber]=randomNumber >4</app-card>
+      </div>    
+  </div>
+</div>
+<div>
+  <button class="btn-btn-primary" (click)="startTimer();startColorChange();  $event.stopPropagation()" 
+  [disabled]='disablestart'>start</button> 
+ </div>
+  <div>
+      Time Left
+    </div>
+  <div>
+      {{message}}
+    </div>
+    <div (click)="displayScore()">
+      score
+    </div>
+    <div>
+      {{score}}
+    </div>
+  
+
+</div>
