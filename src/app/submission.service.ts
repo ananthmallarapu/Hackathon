@@ -4,7 +4,7 @@ import { Http, HttpModule } from '@angular/http'
 @Injectable()
 export class SubmissionService {
 
-  url = "";
+  url = "172.23.238.179:3000/submissions";
 
   constructor(private http: Http) { }
 
